@@ -97,6 +97,7 @@ export const a2aAgentRoute = registerApiRoute("/a2a/agent/:agentId", {
         artifacts.push({
           artifactId: randomUUID(),
           name: "ToolResults",
+          //@ts-ignore
           parts: response.toolResults.map((res) => ({
             kind: "data",
             data: res,
